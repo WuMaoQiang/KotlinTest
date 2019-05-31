@@ -6,7 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * author:  cc
@@ -20,11 +24,20 @@ public class javaMain extends AppCompatActivity {
         setContentView(R.layout.javamain);
 
         int[] arr=new int[]{1,2,3,4};
-        Log.i("xiaoqiang", "onCreate: "+arr);
 
         List<String> list=new ArrayList<>();
         list.add("aa");
         list.add("bb");
+        list.set(1,"123");
         Log.i("xiaoqiang", "onCreate: "+list);
+
+
+        Set<String> strings=new HashSet<>();
+        strings.add("asd");
+
+        Map<String,String> map=new HashMap<>();
+        map.put("a","s");
+        Set<String> strings1 = map.keySet();
+
     }
 }
