@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Hell.World!" />
+
+    <Button
+        android:id="@+id/btn_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_int" />
+
+    <Button
+        android:id="@+id/btn_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_float" />
+    <Button
+        android:id="@+id/btn_double"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_double" />
+
+    <Button
+        android:id="@+id/btn_boolean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_boolean" />
+
+    <Button
+        android:id="@+id/btn_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_char" />
+    <Button
+        android:id="@+id/btn_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_long" />
+
+
+</LinearLayout>
