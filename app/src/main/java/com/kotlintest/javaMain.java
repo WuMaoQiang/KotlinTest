@@ -1,9 +1,12 @@
 package com.kotlintest;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,26 +21,37 @@ import java.util.Set;
  * date:   On  2019/5/30
  */
 public class javaMain extends AppCompatActivity {
+    TextView tv_alert;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.javamain);
+        tv_alert = findViewById(R.id.tv_alert);
 
-        int[] arr=new int[]{1,2,3,4};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("尊敬的用户");
+        builder.setMessage("你真的要卸载我吗？");
+        builder.setPositiveButton("残忍卸载", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                tv_alert.setText("虽然依依不舍，但是只能离开了");
+            }
 
-        List<String> list=new ArrayList<>();
-        list.add("aa");
-        list.add("bb");
-        list.set(1,"123");
-        Log.i("xiaoqiang", "onCreate: "+list);
+        });
+        builder.setNegativeButton("我再想想", new DialogInterface.OnClickListener() {
+            @Override
 
 
-        Set<String> strings=new HashSet<>();
-        strings.add("asd");
+            public void onClick(DialogInterface dialog, int which) {
+                tv_alert.setText("让我再陪你三百六十五个日夜");
+            }
 
-        Map<String,String> map=new HashMap<>();
-        map.put("a","s");
-        Set<String> strings1 = map.keySet();
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
 
     }
+
+
 }
